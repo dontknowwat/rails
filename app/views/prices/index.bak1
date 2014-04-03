@@ -1,0 +1,32 @@
+
+<h1>Listing prices</h1>
+<div class="row">
+  <div class="small-8 large-8 small-centered large-centered columns">
+     <% simple_form_for @prices do |f| %>
+     <%= f.input :product, placeholder: 'search' %>
+           <%= f.button :submit %>
+         <% end %>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>pic</th>
+      <th>title</th>
+      <th>price</th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td><%= @title %></td>
+        <td><%= @prices %></td>
+        
+      </tr>
+      </tbody>
+</table>
+
+<br>
+
+ </div>
+</div>

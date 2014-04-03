@@ -1,0 +1,11 @@
+require 'rubygems'
+require 'nokogiri'
+require 'open-uri'
+
+url = "http://www.flipkart.com/transcend-jetram-ddr3-4-gb-laptop-ram-jm1333ksh-4g/p/itmdgkutmqdxcskh?pid=RAMDGKUTT6GHGRGJ&icmpid=reco_hp_personalBR_4&otracker=hp_mod__reco_prd_title"
+doc = Nokogiri::HTML(open(url))
+puts doc.at_css("title").text
+title = doc.at_css("h1").text
+  price = doc.at_css(".pprice").text
+  puts "#{title} - #{price}"
+  
